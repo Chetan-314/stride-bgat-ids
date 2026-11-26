@@ -1,0 +1,23 @@
+﻿# Environments & caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Raw data & large intermediate NumPy matrices
+data/raw/
+data/processed/*.npy
+outputs/artifacts/*.npy
+
+# OS & editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Editable Word report drafts
+*.docx
+
+*generate_report_diagrams.py
+*generate_uml_diagrams.py

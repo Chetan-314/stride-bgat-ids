@@ -1,0 +1,30 @@
+% Table II: Ablation Results
+\begin{tabular}{lrrrrl}
+\toprule
+Configuration & Macro_F1 & Micro_F1 & Hamming_Loss & Exact_Match & Macro_AUROC \\
+\midrule
+Single-Label XGBoost (Baseline) & 0.405700 & 0.636500 & 0.097800 & 0.572900 & N/A \\
+Static Multi-Label XGBoost (tau=0.50) & 0.594500 & 0.695900 & 0.136000 & 0.712900 & 0.954000 \\
+Static Multi-Label XGBoost (Calibrated tau*) & 0.673500 & 0.785100 & 0.075900 & 0.804200 & 0.954000 \\
+Standalone Behavioural k-NN GAT (tau=0.50) & 0.668500 & 0.766700 & 0.083200 & 0.782500 & 0.952200 \\
+Standalone Behavioural k-NN GAT (Calibrated tau*) & 0.670000 & 0.767000 & 0.082300 & 0.788600 & 0.952200 \\
+Naive Late Averaging (XGB + B-GAT) & 0.627500 & 0.730700 & 0.109400 & 0.725700 & 0.953600 \\
+Logit-Gated B-GAT Fusion (tau=0.50) & 0.651300 & 0.769800 & 0.071000 & 0.780500 & 0.955600 \\
+Logit-Gated B-GAT Fusion + Calibrated tau* (Ours) & 0.683500 & 0.784400 & 0.075600 & 0.806500 & 0.955600 \\
+\bottomrule
+\end{tabular}
+
+
+% Table III: Per-STRIDE Dimension Performance & McNemar's Test
+\begin{tabular}{lrrrrrrll}
+\toprule
+STRIDE_Dim & Gate_w_XGB & Tau_Star & AUROC & F1_Single_Base & F1_Static_XGB & F1_Ours & p_vs_Single & p_vs_XGB \\
+\midrule
+Spoofing (S) & 0.563800 & 0.400000 & 0.971200 & 0.775300 & 0.777200 & 0.775100 & 0.0080 & 0.0081 \\
+Tampering (T) & 0.987200 & 0.400000 & 0.943400 & 0.769800 & 0.773800 & 0.773500 & <0.0001 & <0.0001 \\
+Repudiation (R) & 0.068800 & 0.100000 & 0.925700 & 0.000000 & 0.122400 & 0.187200 & <0.0001 & 0.1428 \\
+Info_Disclosure (I) & 0.916900 & 0.350000 & 0.948700 & 0.011300 & 0.716700 & 0.714600 & <0.0001 & 0.0807 \\
+DoS (D) & 0.977300 & 0.500000 & 0.981000 & 0.878000 & 0.877700 & 0.876600 & 0.3648 & 0.2141 \\
+EoP (E) & 0.982200 & 0.300000 & 0.963800 & 0.000000 & 0.773100 & 0.773800 & <0.0001 & 0.0001 \\
+\bottomrule
+\end{tabular}

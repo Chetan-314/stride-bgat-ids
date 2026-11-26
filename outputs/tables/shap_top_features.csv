@@ -1,0 +1,7 @@
+Dimension,Top_Feature,Engineered,Mean_Abs_SHAP
+Spoofing (S),sbytes,No,0.0428
+Tampering (T),sttl,No,0.1142
+Repudiation (R),feat_asymmetry_ratio,Yes,0.0403
+Info_Disclosure (I),sttl,No,0.087
+DoS (D),service_dns,No,0.1021
+EoP (E),sttl,No,0.0777
